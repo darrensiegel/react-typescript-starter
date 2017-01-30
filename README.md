@@ -1,7 +1,7 @@
 # react-typescript-starter
 
 A project to use to bootstrap a React web application written
-in TypeScript. 
+in TypeScript.
 
 This includes and sets up:
 * React
@@ -34,7 +34,8 @@ Then delete the local git repo.
 $ rm -rf react-typescript-starter/.git
 ```
 
-Next, customize the `package.json`, adding your project name and description.
+Next, customize the `package.json`, adding your project name and description
+and rename the directory to something project specific. 
 
 Then, install the appliction dependencies:
 
@@ -52,5 +53,3 @@ A browser window should appear with a simple application with a list of five
 items that you can select from.
 
 Finally, go change source code and implement your code.
-
-
