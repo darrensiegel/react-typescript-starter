@@ -11,7 +11,7 @@ interface Main {
 
 export interface MainProps {
   dispatch: any;
-  selectedItem: any;
+  selectedItem: string;
 }
 
 class Main extends React.Component<MainProps, {}> {
