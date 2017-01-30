@@ -35,9 +35,9 @@ $ rm -rf react-typescript-starter/.git
 ```
 
 Next, customize the `package.json`, adding your project name and description
-and rename the directory to something project specific. 
+and rename the directory to something project specific.
 
-Then, install the appliction dependencies:
+Then, install the application dependencies:
 
 ```
 $ yarn
