@@ -13,12 +13,7 @@ This includes and sets up:
 
 ## Dependencies
 
-You will need to have `yarn`, `gulp`, and `jest` installed as global
-npm packages.
-
-```
-$ npm install -g gulp yarn jest
-```
+You need to have docker installed.
 
 ## How to Use
 
@@ -37,19 +32,23 @@ $ rm -rf react-typescript-starter/.git
 Next, customize the `package.json`, adding your project name and description
 and rename the directory to something project specific.
 
-Then, install the application dependencies:
+Then, run the application in the containerized development mode. This will
+build a container, install necessary packages and finally run the application
+in development mode inside the container yet accessible to your localhost
+port mapping.
 
 ```
-$ yarn
+$ docker-compose up
 ```
 
-Next, run the application in development mode to verify everything is working:
-
-```
-$ gulp dev
-```
-
-A browser window should appear with a simple application with a list of five
-items that you can select from.
+Then open a browser window and hit [http://localhost:9000/index.html].
 
 Finally, go change source code and implement your code.
+
+If you add or change npm dependencies, stop, rebuild and restart the container:
+
+```
+$ docker-compose down
+
+$ docker-compose up --build
+```
