@@ -34,14 +34,15 @@ and rename the directory to something project specific.
 
 Then, run the application in the containerized development mode. This will
 build a container, install necessary packages and finally run the application
-in development mode inside the container yet accessible to your localhost
+in development mode inside the container yet accessible to your localhost via
 port mapping.
 
 ```
 $ docker-compose up
 ```
 
-Then open a browser window and hit [http://localhost:9000/index.html].
+Then open a browser window and
+hit [http://localhost:9000/index.html](http://localhost:9000/index.html).
 
 Finally, go change source code and implement your code.
 
