@@ -101,7 +101,7 @@ gulp.task('build', function(callback) {
 });
 
 gulp.task('dev', function(cb) {
-  runSequence('prelude', 'clean:dev', 'setupDev', 'open', 'serve', cb);
+  runSequence('prelude', 'clean:dev', 'setupDev', 'serve', cb);
 });
 
 gulp.task('dist', function(cb) {
@@ -109,7 +109,7 @@ gulp.task('dist', function(cb) {
 });
 
 gulp.task('test', function(cb) {
-  return run('jest').exec();   
+  return run('jest').exec();
 });
 
 gulp.task('prelude', function() {
