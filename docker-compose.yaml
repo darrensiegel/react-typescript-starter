@@ -1,0 +1,10 @@
+version: '2'
+services:
+  dev:
+    build: .
+    ports:
+      - "9000:9000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    command: gulp dev
