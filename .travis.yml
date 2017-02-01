@@ -6,6 +6,7 @@ services:
   - docker
 
 before_script:
+  - docker --version
   - docker build -t darrensiegel/react-typescript-starter .
   - docker run -d --name app darrensiegel/react-typescript-starter
   - docker ps -a
