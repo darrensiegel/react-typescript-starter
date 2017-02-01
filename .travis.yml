@@ -6,6 +6,10 @@ language: ruby
 services:
   - docker
 
+before_install:
+  - sudo apt-get update
+  - sudo apt-get install docker-engine
+
 before_script:
   - docker --version
   - docker build -t darrensiegel/react-typescript-starter .
