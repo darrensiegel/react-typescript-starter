@@ -12,12 +12,10 @@ before_install:
 
 before_script:
   - docker --version
-  - docker build -t darrensiegel/react-typescript-starter .
-  - docker run -d --name app darrensiegel/react-typescript-starter
-  - docker ps -a
+  - docker-compose up --build
 
 script:
-  - docker exec app jest
+  - docker exec starter jest
 
 after_script:
-  - docker rm -f app
+  - docker-compose down
