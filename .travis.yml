@@ -11,12 +11,17 @@ before_install:
   - sudo apt-get install docker-engine
 
 before_script:
+  - mkdir dist
   - docker --version
   - docker-compose up -d --build
   - docker ps -a
 
 script:
   - docker exec starter jest
+  - docker exec starter gulp dist
+
+after_success:
+  - ls dist
 
 after_script:
   - docker-compose down
