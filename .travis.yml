@@ -1,0 +1,18 @@
+sudo: required
+
+language: ruby
+
+services:
+  - docker
+
+before_script:
+  - docker build -t darrensiegel/react-typescript-starter .
+  - docker run -d --name app darrensiegel/react-typescript-starter
+  - docker ps -a
+
+script:
+  - docker exec app gulp dist
+  - docker exec app jest
+
+after_script:
+  - docker rm -f app
