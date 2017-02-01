@@ -1,7 +1,12 @@
 var path = require('path');
+var webpack = require('webpack');
 
 module.exports = {
-    entry: "./src//app.tsx",
+    entry: [
+        'webpack-dev-server/client?http://0.0.0.0:3000',
+        'webpack/hot/only-dev-server',
+        './src/app.tsx'
+    ],
     output: {
         path: __dirname + '/dev',
         filename: "bundle.js",
@@ -25,8 +30,11 @@ module.exports = {
             { test: /\.json$/, loader: 'json-loader' },
             { test: /\.(png|gif|jpg|jpeg|svg)$/, loader: 'file-loader' },
             { test: /\.ts$/, loaders: [ 'babel', 'ts-loader'], exclude: /node_modules/ },
-            { test: /\.tsx$/, loaders: [ 'babel', 'ts-loader'], exclude: /node_modules/ }
+            { test: /\.tsx$/, loaders: [ 'react-hot', 'babel', 'ts-loader'], exclude: /node_modules/ }
         ]
 
-    }
+    },
+    plugins: [
+        new webpack.HotModuleReplacementPlugin()
+    ]
 };
