@@ -13,6 +13,7 @@ This includes and sets up:
 * Gulp for build system
 * yarn for management of npm modules
 * Dockerized development and testing 
+* Automated Travis testing and distribution building
 
 ## Dependencies
 
