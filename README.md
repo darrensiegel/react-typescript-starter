@@ -3,6 +3,8 @@
 A project to use to bootstrap a React web application written
 in TypeScript.
 
+[![Build Status](https://travis-ci.org/darrensiegel/react-typescript-starter.svg?branch=master)](https://travis-ci.org/darrensiegel/react-typescript-starter)
+
 This includes and sets up:
 * React
 * TypeScript
@@ -38,6 +40,9 @@ file `docker-compose.yaml` to specify the exact container_name that you wish
 to use.  That setting would typically just match the project name. You may 
 also need to specify additional services (such as a back-end REST API provider), 
 depending on what your application requires to run.
+
+Next customize the travis build file and the travis build indicator link that 
+is embedded in this README. 
 
 Then, run the application in the containerized development mode. This will
 build a container, install necessary packages and finally run the application
